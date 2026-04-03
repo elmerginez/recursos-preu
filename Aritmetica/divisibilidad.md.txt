@@ -75,7 +75,9 @@ $$200 = \overset{\circ}{3} + 2$$
 El residuo será el mismo que el de la potencia $4^2$. **Respuesta: 2**.
 
 ---
-
+> ### 💡 Representación Visual
+> ![Diagrama de Conjuntos](https://tu-url-de-supabase.png)
+> *Figura 1: Relación de inclusión entre múltiplos de 2 y 4.*
 ## 📝 Ejercicio de Autoevaluación
 **Pregunta:** Si el número $\overline{1x2x5}$ es divisible por $9$, ¿cuál es el valor de $x$?
 
