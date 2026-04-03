@@ -1,0 +1,87 @@
+# 🔢 Aritmética: Teoría de la Divisibilidad
+**Nivel:** Pre-Universitario / Admisión UNAP
+**Materia:** Aritmética | **Unidad:** 04
+
+---
+
+## 1. Definición Matemática
+Se dice que un número entero $A$ es **divisible** entre otro entero positivo $B$ (llamado módulo) si al realizar la división de $A$ entre $B$, el residuo es exactamente cero.
+
+$$A = B \cdot k \quad \text{donde } k \in \mathbb{Z}$$
+
+### Notación de Multiplicidad
+Si $A$ es divisible por $B$, también decimos que $A$ es **múltiplo** de $B$. Se representa colocando un pequeño círculo sobre el número:
+
+$$A = \overset{\circ}{B} \quad \text{o también} \quad A = nB$$
+
+---
+
+## 2. Divisibilidad por Defecto y Exceso
+Cuando un número no es divisible exactamente, el residuo se puede expresar de dos maneras:
+
+1. **Por Defecto ($r_d$):** $A = \overset{\circ}{B} + r_d$
+2. **Por Exceso ($r_e$):** $A = \overset{\circ}{B} - r_e$
+
+> **Propiedad Fundamental:** La suma de ambos residuos siempre es igual al divisor (módulo).
+> $$r_d + r_e = B$$
+
+*Ejemplo:* Para el número $25$ respecto al módulo $7$:
+* $25 = \overset{\circ}{7} + 4$ (Sobra 4)
+* $25 = \overset{\circ}{7} - 3$ (Faltan 3 para llegar al siguiente múltiplo)
+* Comprobación: $4 + 3 = 7$
+
+---
+
+## 3. Principios de la Divisibilidad
+
+### A. Operaciones con el mismo módulo
+Si tenemos varios números que son múltiplos del mismo valor $n$:
+1. $\overset{\circ}{n} + \overset{\circ}{n} + \overset{\circ}{n} = \overset{\circ}{n}$
+2. $\overset{\circ}{n} - \overset{\circ}{n} = \overset{\circ}{n}$
+3. $\overset{\circ}{n} \cdot k = \overset{\circ}{n} \quad (k \in \mathbb{Z})$
+4. $(\overset{\circ}{n} + r)^k = \overset{\circ}{n} + r^k$
+
+### B. Principio de Arquímedes
+Es vital para resolver ecuaciones diofánticas. Si el producto de dos números es múltiplo de $n$, y uno de ellos no tiene nada en común con el módulo (son PESI), el otro debe ser el múltiplo.
+
+*Si $A \cdot B = \overset{\circ}{n}$ y $MCD(A, n) = 1 \implies B = \overset{\circ}{n}$*
+
+---
+
+## 4. Criterios de Divisibilidad (Resumen para Examen)
+
+Para acelerar el cálculo en el examen de admisión, usamos reglas según las cifras del número:
+
+| Módulo | Regla Práctica |
+| :--- | :--- |
+| **$\overset{\circ}{2}, \overset{\circ}{4}, \overset{\circ}{8}$** | Las últimas $1, 2$ o $3$ cifras deben ser múltiplos de $2, 4$ u $8$. |
+| **$\overset{\circ}{3}$ o $\overset{\circ}{9}$** | La **suma de todas las cifras** del número debe ser $\overset{\circ}{3}$ o $\overset{\circ}{9}$. |
+| **$\overset{\circ}{5}$** | La última cifra debe terminar en $0$ o $5$. |
+| **$\overset{\circ}{11}$** | Se asignan signos $(+ - + -)$ de derecha a izquierda. La suma resultante debe ser $\overset{\circ}{11}$. |
+| **$\overset{\circ}{7}$** | Se multiplican las cifras por el patrón $(\dots, 3, 2, 1, -3, -2, -1, 3, 2, 1)$ de derecha a izquierda. |
+
+---
+
+## 5. Gaussiano y Restos Potenciales
+Sirve para hallar el residuo de potencias muy grandes. El **Gaussiano ($g$)** es la menor cantidad de potencias diferentes que se repiten en ciclo.
+
+**Ejemplo:** Hallar el residuo de $4^{200}$ entre $7$.
+1. $4^1 = \overset{\circ}{7} + 4$
+2. $4^2 = \overset{\circ}{7} + 2$
+3. $4^3 = \overset{\circ}{7} + 1 \quad \leftarrow \text{Ciclo cerrado (Residuo 1)}$
+
+Como el ciclo es de $3$ ($g=3$), dividimos el exponente original entre el Gaussiano:
+$$200 = \overset{\circ}{3} + 2$$
+El residuo será el mismo que el de la potencia $4^2$. **Respuesta: 2**.
+
+---
+
+## 📝 Ejercicio de Autoevaluación
+**Pregunta:** Si el número $\overline{1x2x5}$ es divisible por $9$, ¿cuál es el valor de $x$?
+
+**Resolución:**
+Por criterio del $9$: $1 + x + 2 + x + 5 = \overset{\circ}{9}$
+$$8 + 2x = \overset{\circ}{9}$$
+Probando valores únicos del $0$ al $9$:
+* Si $x = 5 \implies 8 + 2(5) = 18$ (Es múltiplo de 9).
+**Respuesta:** $x = 5$.
