@@ -87,3 +87,67 @@ $$8 + 2x = \overset{\circ}{9}$$
 Probando valores únicos del $0$ al $9$:
 * Si $x = 5 \implies 8 + 2(5) = 18$ (Es múltiplo de 9).
 **Respuesta:** $x = 5$.
+
+
+# 🧪 Test de Estrés: Visor Académico Nezma
+**Propósito:** Verificar renderizado de LaTeX, Tablas, Listas y Estilos.
+
+---
+
+## 1. Trigonometría (Identidades y Fracciones)
+Las identidades trigonométricas prueban el renderizado de potencias y fracciones complejas.
+
+### A. Identidad Pitagórica
+$$\operatorname{sen}^2(\theta) + \cos^2(\theta) = 1$$
+
+### B. Identidad de Ángulo Doble
+$$\tan(2\alpha) = \frac{2\tan(\alpha)}{1 - \tan^2(\alpha)}$$
+
+---
+
+## 2. Física (Vectores y Cinemática)
+Aquí probamos símbolos especiales como flechas, raíces y subíndices.
+
+### A. Módulo de un Vector Resultante
+Si tenemos dos vectores $\vec{A}$ y $\vec{B}$ con un ángulo $\phi$:
+$$R = \sqrt{A^2 + B^2 + 2AB \cdot \cos(\phi)}$$
+
+### B. Ecuación de MRUV
+$$d = v_0 \cdot t + \frac{1}{2} a \cdot t^2$$
+
+---
+
+## 3. Química (Fórmulas y Reacciones)
+Probamos el uso de subíndices químicos y flechas de reacción.
+
+**Reacción de Combustión Completa del Metano:**
+$$CH_4 + 2O_2 \longrightarrow CO_2 + 2H_2O + \text{Energía}$$
+
+---
+
+## 4. Geometría y Cuadros Comparativos
+| Polígono | Lados | Suma de Ángulos Internos ($S_i$) | Diagonal ($D$) |
+| :--- | :---: | :---: | :---: |
+| Triángulo | $3$ | $180^\circ$ | $0$ |
+| Cuadrilátero | $4$ | $360^\circ$ | $2$ |
+| Pentágono | $5$ | $540^\circ$ | $5$ |
+| **Enésimo** | $n$ | $180^\circ(n-2)$ | $\frac{n(n-3)}{2}$ |
+
+---
+
+## 5. Listas y Bloques de Código (Tips)
+* **Punto 1:** Las fórmulas en línea como $E = mc^2$ no deben deformar el párrafo.
+* **Punto 2:** Los bloques de cita sirven para notas importantes.
+
+> ### 📝 Nota para el Examen
+> En problemas de **Estática**, recuerda que la suma de momentos respecto a cualquier punto debe ser cero:
+> $$\sum M_O = 0$$
+
+---
+
+## 6. Símbolos Especiales (Límites e Integrales)
+Solo para ver si el plugin `rehype-katex` está bien configurado:
+$$\lim_{x \to \infty} \left( 1 + \frac{1}{x} \right)^x = e$$
+$$\int_{a}^{b} f(x) dx = F(b) - F(a)$$
+
+---
