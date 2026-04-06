@@ -1,162 +1,280 @@
-# 🏛️ Semana 01: Lógica Proposicional (Teoría y Práctica)
-**Área:** Ingenierías | **Ciclo:** Marzo - Julio 2026 CEPREUNA
-**Materia:** Aritmética
+# Semana 2: Razones Trigonométricas en el Triángulo Rectángulo
+
+## Contenido
+1. [Definición de las razones trigonométricas para ángulos agudos](#definición)
+2. [Razones trigonométricas recíprocas](#recíprocas)
+3. [Razones trigonométricas de ángulos complementarios](#complementarios)
+4. [Razones trigonométricas de ángulos notables](#notables)
+5. [Resolución de triángulos rectángulos](#resolución)
+6. [Ejemplos integradores (básico a avanzado)](#ejemplos)
 
 ---
 
-## Teoría Normal en Markdown
-La lógica proposicional es fundamental para el examen.
+## 1. Definición de las razones trigonométricas para ángulos agudos <a name="definición"></a>
 
-<div style="background-color: rgba(255, 0, 0, 0.1); border-left: 4px solid red; padding: 15px; border-radius: 5px; margin: 20px 0;">
-  <h3 style="color: #ff6b6b; margin-top: 0;">🚨 ¡Ojo al dato!</h3>
-  <p>En las preguntas tipo <b>DECO</b> de la UNAP, la palabra "pero" equivale a una conjunción $\land$.</p>
-</div>
+En un triángulo rectángulo, llamamos **ángulo agudo** a aquel que mide menos de 90° (o \(\frac{\pi}{2}\) rad). Para uno de estos ángulos, digamos \(\theta\), identificamos sus lados relativos:
 
-<div align="center">
-  <span style="color: #4ade80; font-size: 1.2rem; font-weight: bold;">
-    ¡Ese truco vale oro en el simulacro!
-  </span>
-</div>
+- **Hipotenusa (h):** lado opuesto al ángulo recto, el más largo.
+- **Cateto opuesto (CO):** lado que está enfrente de \(\theta\).
+- **Cateto adyacente (CA):** lado que forma el ángulo \(\theta\) junto con la hipotenusa.
 
-## 1. Enunciados y Proposiciones
-[cite_start]Antes de operar, debemos saber qué es válido en la lógica y qué no.
+![Triángulo rectángulo](https://i.imgur.com/placeholder.png)  
+*Descripción: triángulo rectángulo con ángulo θ, CO, CA e hipotenusa.*
 
-### A. Enunciado
-Es cualquier frase, oración o expresión matemática. 
-* *Ejemplo:* "¡Qué frío hace en Juliaca!", "$x + 2 = 5$", "¿Qué hora es?".
+Las seis razones trigonométricas se definen como:
 
-### B. Proposición Lógica ($p, q, r, \dots$)
-[cite_start]Es un enunciado aseverativo (afirma o niega algo) que tiene la propiedad exclusiva de ser **Verdadero (V)** o **Falso (F)**, pero nunca ambos a la vez.
-* **Sí son proposiciones:**
-  * "El lago Titicaca es el más alto del mundo." (V)
-  * "$2 + 2 = 5$" (F)
-* **No son proposiciones:**
-  * Preguntas, exclamaciones, deseos, órdenes ("¡Ingresaré a la UNAP!").
-  * **Enunciados abiertos:** "$x + 3 = 8$" (No sabemos si es V o F porque no conocemos el valor de $x$. Si le damos un valor, se convierte en proposición).
+| Razón | Símbolo | Fórmula |
+|-------|---------|---------|
+| Seno | \(\sin \theta\) | \(\frac{CO}{h}\) |
+| Coseno | \(\cos \theta\) | \(\frac{CA}{h}\) |
+| Tangente | \(\tan \theta\) | \(\frac{CO}{CA}\) |
+| Cotangente | \(\cot \theta\) | \(\frac{CA}{CO}\) |
+| Secante | \(\sec \theta\) | \(\frac{h}{CA}\) |
+| Cosecante | \(\csc \theta\) | \(\frac{h}{CO}\) |
 
----
+> **Regla mnemotécnica:** *SOH CAH TOA*  
+> - **S**eno = **O**puesto / **H**ipotenusa  
+> - **C**oseno = **A**dyacente / **H**ipotenusa  
+> - **T**angente = **O**puesto / **A**dyacente
 
-## [cite_start]2. Conectivos Lógicos y Funciones Veritativas 
-Son los símbolos que enlazan proposiciones simples para formar compuestas. Cada conectivo tiene palabras equivalentes en nuestro idioma.
+### Ejemplo básico
+Dado un triángulo rectángulo con cateto opuesto a \(\theta = 3\), cateto adyacente = 4 e hipotenusa = 5. Calcular las seis razones para \(\theta\).
 
-### 2.1 Conjunción ($\land$)
-* **Se lee:** "p y q", "p pero q", "p sin embargo q", "p además q".
-* **Regla:** Solo es Verdadera ($V$) cuando **ambas** proposiciones son Verdaderas.
-
-### 2.2 Disyunción Débil o Inclusiva ($\lor$)
-* **Se lee:** "p o q", "p a menos que q".
-* **Regla:** Solo es Falsa ($F$) cuando **ambas** proposiciones son Falsas. (Admite que ambas pasen a la vez).
-
-### 2.3 Disyunción Fuerte o Exclusiva ($\Delta$)
-* **Se lee:** "O bien p o bien q" (pero no ambas).
-* **Regla:** Es Verdadera ($V$) solo cuando los valores son **diferentes**.
-
-### 2.4 Condicional ($\to$)
-* **Se lee:** "Si p entonces q", "p implica q", "q porque p" (¡Ojo! El orden importa: $p$ es la causa/antecedente y $q$ el efecto/consecuente).
-* **Regla:** Solo es Falsa ($F$) cuando partimos de una verdad y llegamos a una falsedad ($V \to F = F$).
-
-### 2.5 Bicondicional ($\leftrightarrow$)
-* **Se lee:** "p si y solo si q", "p es condición necesaria y suficiente para q".
-* **Regla:** Es Verdadera ($V$) solo cuando **ambos valores son iguales**.
-
-
+- \(\sin \theta = \frac{3}{5} = 0.6\)
+- \(\cos \theta = \frac{4}{5} = 0.8\)
+- \(\tan \theta = \frac{3}{4} = 0.75\)
+- \(\cot \theta = \frac{4}{3} \approx 1.333\)
+- \(\sec \theta = \frac{5}{4} = 1.25\)
+- \(\csc \theta = \frac{5}{3} \approx 1.667\)
 
 ---
 
-## [cite_start]3. Tablas de Verdad y Evaluación de Esquemas 
+## 2. Razones trigonométricas recíprocas <a name="recíprocas"></a>
 
-Para evaluar una fórmula compleja, seguimos una jerarquía:
-1. Paréntesis y corchetes.
-2. Negación ($\sim$).
-3. Conjunción ($\land$) y Disyunción ($\lor$).
-4. Condicional ($\to$).
-5. Bicondicional ($\leftrightarrow$) y Disyunción Fuerte ($\Delta$).
+Las razones recíprocas son aquellas que al multiplicarse dan 1. Se cumplen las siguientes relaciones:
 
-### 📝 Caso Práctico Resuelto: Evaluación
-**Problema:** Evaluar el esquema molecular: $(p \lor \sim q) \to (p \land q)$ e indicar si es Tautología, Contradicción o Contingencia.
+\[
+\csc \theta = \frac{1}{\sin \theta}, \qquad
+\sec \theta = \frac{1}{\cos \theta}, \qquad
+\cot \theta = \frac{1}{\tan \theta}
+\]
 
-**Solución Paso a Paso:**
-Como hay 2 variables ($p, q$), la tabla tendrá $2^2 = 4$ filas.
+De manera inversa:
+\[
+\sin \theta = \frac{1}{\csc \theta}, \qquad
+\cos \theta = \frac{1}{\sec \theta}, \qquad
+\tan \theta = \frac{1}{\cot \theta}
+\]
 
-| $p$ | $q$ | $(p$ | $\lor$ | $\sim q)$ | $\to$ | $(p$ | $\land$ | $q)$ |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| V | V | V | **V** | F | **V** | V | **V** | V |
-| V | F | V | **V** | V | **F** | V | **F** | F |
-| F | V | F | **F** | F | **V** | F | **F** | V |
-| F | F | F | **V** | V | **F** | F | **F** | F |
-| | | 1 | **3** | 2 | **Rpta** | 1 | **2** | 1 |
+### Identidades por cociente
+A partir de las definiciones también obtenemos:
+\[
+\tan \theta = \frac{\sin \theta}{\cos \theta}, \qquad
+\cot \theta = \frac{\cos \theta}{\sin \theta}
+\]
 
-* **Análisis:** La columna principal (debajo de $\to$) tiene valores V y F.
-* **Respuesta:** El esquema es una **Contingencia**.
+### Ejemplo intermedio
+Si \(\sin \theta = 0.6\), hallar \(\csc \theta\), \(\sec \theta\) y \(\tan \theta\) (suponiendo un ángulo agudo en un triángulo 3-4-5).
 
----
-
-## [cite_start]4. Implicación y Equivalencia Lógica 
-
-* **Implicación Lógica ($\Rightarrow$):** Decimos que $A \Rightarrow B$ si y solo si al hacer la tabla de verdad de $A \to B$, el resultado es una Tautología absoluta.
-* **Equivalencia Lógica ($\equiv$):** Decimos que $A \equiv B$ si y solo si la tabla de verdad de $A \leftrightarrow B$ es una Tautología. [cite_start]Significa que ambas fórmulas valen exactamente lo mismo y pueden reemplazarse entre sí.
+- \(\csc \theta = \frac{1}{0.6} = \frac{5}{3} \approx 1.667\)
+- Para \(\cos \theta\): usamos la identidad pitagórica \(\sin^2\theta + \cos^2\theta = 1\) → \(0.36 + \cos^2\theta = 1\) → \(\cos^2\theta = 0.64\) → \(\cos\theta = 0.8\) (positivo por ser agudo). Entonces \(\sec \theta = \frac{1}{0.8}=1.25\).
+- \(\tan \theta = \frac{\sin\theta}{\cos\theta} = \frac{0.6}{0.8} = 0.75\).
 
 ---
 
-## [cite_start]5. Leyes del Álgebra Proposicional (Equivalencias Notables) 
-Estas leyes te salvan la vida en el examen. Memorízalas.
+## 3. Razones trigonométricas de ángulos complementarios <a name="complementarios"></a>
 
-1. **Idempotencia:** $p \lor p \equiv p$  |  $p \land p \equiv p$
-2. **Conmutativa:** $p \lor q \equiv q \lor p$  |  $p \land q \equiv q \land p$
-3. **Leyes de Morgan (¡Fijas!):** $$\sim(p \land q) \equiv \sim p \lor \sim q$$
-   $$\sim(p \lor q) \equiv \sim p \land \sim q$$
-4. **Definición del Condicional (¡Muy usada!):** $$p \to q \equiv \sim p \lor q$$
-5. **Leyes de Absorción (Ahorran minutos):**
-   * $p \lor (p \land q) \equiv p$
-   * $p \land (p \lor q) \equiv p$
-   * $p \lor (\sim p \land q) \equiv p \lor q$ *(El de afuera absorbe a su negación)*
-   * $p \land (\sim p \lor q) \equiv p \land q$
+Dos ángulos agudos son **complementarios** si suman 90° (o \(\frac{\pi}{2}\) rad). En un triángulo rectángulo, los dos ángulos agudos siempre son complementarios. Si \(\alpha + \beta = 90^\circ\), entonces:
 
-### 📝 Caso Práctico Resuelto: Simplificación
-**Problema:** Simplificar la expresión: $\sim(\sim p \to q) \lor p$
+\[
+\sin \alpha = \cos \beta, \quad
+\tan \alpha = \cot \beta, \quad
+\sec \alpha = \csc \beta
+\]
 
-**Solución Paso a Paso:**
-1. Aplicamos la definición del condicional en el paréntesis ($A \to B \equiv \sim A \lor B$):
-   $$\sim(\sim(\sim p) \lor q) \lor p$$
-2. Doble negación ($\sim(\sim p) \equiv p$):
-   $$\sim(p \lor q) \lor p$$
-3. Aplicamos Ley de Morgan al paréntesis:
-   $$(\sim p \land \sim q) \lor p$$
-4. Aplicamos propiedad Conmutativa para acomodarlo a la vista:
-   $$p \lor (\sim p \land \sim q)$$
-5. Aplicamos Ley de Absorción (Caso 3: el de afuera absorbe a su negación interna):
-   $$p \lor \sim q$$
-   
-**Respuesta:** La expresión se reduce a $p \lor \sim q$ (que también equivale a $q \to p$).
+Equivalentemente, para un ángulo \(\theta\) (agudo):
+\[
+\sin(90^\circ - \theta) = \cos \theta, \quad
+\cos(90^\circ - \theta) = \sin \theta, \quad
+\tan(90^\circ - \theta) = \cot \theta
+\]
+\[
+\cot(90^\circ - \theta) = \tan \theta, \quad
+\sec(90^\circ - \theta) = \csc \theta, \quad
+\csc(90^\circ - \theta) = \sec \theta
+\]
+
+### Ejemplo
+Calcular \(\sin 40^\circ\) sabiendo que \(\cos 50^\circ = 0.6428\).  
+Como \(40^\circ + 50^\circ = 90^\circ\), entonces \(\sin 40^\circ = \cos 50^\circ = 0.6428\).
 
 ---
 
-## [cite_start]6. Circuitos Lógicos 
-Es la aplicación de la lógica a la física y electrónica.
+## 4. Razones trigonométricas de ángulos notables <a name="notables"></a>
 
-### A. Circuito en Serie (Conjunción $\land$)
-La energía debe pasar por todos los interruptores uno tras otro. Si uno falla, no hay corriente.
-$$\text{--- } p \text{ --- } q \text{ ---} \equiv p \land q$$
+Los ángulos de \(30^\circ\), \(45^\circ\) y \(60^\circ\) (y sus equivalentes en radianes \(\frac{\pi}{6},\frac{\pi}{4},\frac{\pi}{3}\)) aparecen frecuentemente. Sus razones se obtienen geométricamente:
 
-### B. Circuito en Paralelo (Disyunción $\lor$)
-La energía tiene caminos alternativos. Basta que un interruptor funcione para que pase la corriente.
-$$\begin{matrix}
- \text{---} & p & \text{---} \\
- & | & \\
- \text{---} & q & \text{---} 
-\end{matrix} \equiv p \lor q$$
+### Triángulo equilátero (para 30° y 60°)
+Dividiendo un triángulo equilátero de lado 2 por la altura, obtenemos un triángulo rectángulo con ángulos 30° y 60°, cateto opuesto a 30° = 1, hipotenusa = 2, cateto adyacente a 30° = \(\sqrt{3}\).
 
+### Cuadrado (para 45°)
+La diagonal de un cuadrado de lado 1 genera un triángulo rectángulo isósceles con catetos = 1 e hipotenusa = \(\sqrt{2}\). Sus ángulos agudos miden 45°.
 
+### Tabla de valores exactos
 
-### 📝 Caso Práctico Resuelto: Circuitos
-**Problema:** Determinar la proposición que representa el siguiente circuito y simplificarla.
-*(Imagina un circuito donde arriba hay un interruptor '$p$' y en paralelo, abajo, hay dos interruptores en serie '$\sim p$' y '$q$').*
+| Ángulo | \(\sin\) | \(\cos\) | \(\tan\) | \(\cot\) | \(\sec\) | \(\csc\) |
+|--------|----------|----------|----------|----------|----------|----------|
+| \(30^\circ\) (\(\frac{\pi}{6}\)) | \(\frac{1}{2}\) | \(\frac{\sqrt{3}}{2}\) | \(\frac{\sqrt{3}}{3}\) | \(\sqrt{3}\) | \(\frac{2\sqrt{3}}{3}\) | \(2\) |
+| \(45^\circ\) (\(\frac{\pi}{4}\)) | \(\frac{\sqrt{2}}{2}\) | \(\frac{\sqrt{2}}{2}\) | \(1\) | \(1\) | \(\sqrt{2}\) | \(\sqrt{2}\) |
+| \(60^\circ\) (\(\frac{\pi}{3}\)) | \(\frac{\sqrt{3}}{2}\) | \(\frac{1}{2}\) | \(\sqrt{3}\) | \(\frac{\sqrt{3}}{3}\) | \(2\) | \(\frac{2\sqrt{3}}{3}\) |
 
-**Solución Paso a Paso:**
-1. **Traducción:** La rama de abajo está en serie, por lo tanto es $(\sim p \land q)$.
-2. Esta rama inferior está en paralelo con el interruptor de arriba '$p$'. El paralelo es $\lor$.
-3. La fórmula queda: $p \lor (\sim p \land q)$
-4. **Simplificación:** Por la Ley de Absorción, esto es equivalente a:
-   $$p \lor q$$
+> **Nota:** Los valores para \(37^\circ\) y \(53^\circ\) (aproximadamente 3-4-5) son útiles en problemas prácticos:  
+> \(\sin 37^\circ \approx 0.6,\ \cos 37^\circ \approx 0.8,\ \tan 37^\circ \approx 0.75\)  
+> \(\sin 53^\circ \approx 0.8,\ \cos 53^\circ \approx 0.6,\ \tan 53^\circ \approx 1.333\)
 
-**Respuesta:** El circuito complejo equivale a un simple circuito en paralelo de $p$ y $q$.
+### Ejemplo con ángulos notables
+Hallar el valor exacto de \(\tan 60^\circ + \sin 45^\circ \cdot \cos 30^\circ\).
+
+\[
+\tan 60^\circ = \sqrt{3}, \quad
+\sin 45^\circ = \frac{\sqrt{2}}{2}, \quad
+\cos 30^\circ = \frac{\sqrt{3}}{2}
+\]
+\[
+\sin 45^\circ \cdot \cos 30^\circ = \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{3}}{2} = \frac{\sqrt{6}}{4}
+\]
+\[
+\text{Resultado} = \sqrt{3} + \frac{\sqrt{6}}{4}
+\]
+
+---
+
+## 5. Resolución de triángulos rectángulos <a name="resolución"></a>
+
+Resolver un triángulo rectángulo significa encontrar todos sus lados y ángulos desconocidos. Para ello usamos:
+
+- **Teorema de Pitágoras:** \(h^2 = CO^2 + CA^2\)
+- **Razones trigonométricas:** dependiendo de los datos conocidos.
+- **Ángulos complementarios:** el tercer ángulo es \(90^\circ - \theta\).
+
+### Casos típicos
+
+#### Caso 1: Conocidos un ángulo agudo y la hipotenusa
+Datos: \(\theta\) y \(h\).  
+- \(CO = h \cdot \sin \theta\)  
+- \(CA = h \cdot \cos \theta\)  
+- Ángulo restante: \(90^\circ - \theta\)
+
+#### Caso 2: Conocidos un ángulo agudo y un cateto
+- Si se conoce \(\theta\) y \(CO\):  
+  \(h = \frac{CO}{\sin \theta},\quad CA = \frac{CO}{\tan \theta}\)  
+- Si se conoce \(\theta\) y \(CA\):  
+  \(h = \frac{CA}{\cos \theta},\quad CO = CA \cdot \tan \theta\)
+
+#### Caso 3: Conocidos dos catetos
+Datos: \(CO\) y \(CA\).  
+- \(h = \sqrt{CO^2 + CA^2}\)  
+- \(\tan \theta = \frac{CO}{CA}\) → \(\theta = \arctan\left(\frac{CO}{CA}\right)\)  
+- Ángulo complementario: \(90^\circ - \theta\)
+
+#### Caso 4: Conocidos la hipotenusa y un cateto
+Datos: \(h\) y \(CO\) (o \(CA\)).  
+- El otro cateto por Pitágoras.  
+- \(\sin \theta = \frac{CO}{h}\) → \(\theta = \arcsin\left(\frac{CO}{h}\right)\)  
+- Ángulo complementario.
+
+---
+
+## 6. Ejemplos integradores (básico → avanzado) <a name="ejemplos"></a>
+
+### Ejemplo 1 (Básico)
+En un triángulo rectángulo, un cateto mide 5 cm y la hipotenusa 13 cm. Hallar las razones trigonométricas del ángulo opuesto al cateto de 5 cm.
+
+**Solución:**  
+Cateto opuesto = 5, hipotenusa = 13 → cateto adyacente = \(\sqrt{13^2 - 5^2} = \sqrt{169-25}= \sqrt{144}=12\).  
+Para el ángulo \(\theta\) opuesto al lado de 5:
+\[
+\sin \theta = \frac{5}{13},\ \cos \theta = \frac{12}{13},\ \tan \theta = \frac{5}{12},\ \cot \theta = \frac{12}{5},\ \sec \theta = \frac{13}{12},\ \csc \theta = \frac{13}{5}.
+\]
+
+### Ejemplo 2 (Intermedio – complementarios)
+Si \(\sin(2x+10^\circ) = \cos(3x-20^\circ)\) y los ángulos son agudos, hallar \(x\).
+
+**Solución:**  
+Para ángulos agudos, la igualdad \(\sin A = \cos B\) implica \(A + B = 90^\circ\).  
+\[
+(2x+10^\circ) + (3x-20^\circ) = 90^\circ \implies 5x -10^\circ = 90^\circ \implies 5x = 100^\circ \implies x = 20^\circ.
+\]
+
+### Ejemplo 3 (Intermedio – resolución con ángulos notables)
+Desde la punta de un edificio, se observa un punto en el suelo con un ángulo de depresión de 30°. Si la altura del edificio es 50 m, ¿a qué distancia horizontal se encuentra el punto?
+
+**Solución:**  
+Ángulo de depresión = 30° ⇒ dentro del triángulo rectángulo, el ángulo agudo desde la horizontal es 30°.  
+Cateto opuesto = altura = 50 m. Distancia horizontal \(d\) es el cateto adyacente.  
+\[
+\tan 30^\circ = \frac{\text{opuesto}}{\text{adyacente}} = \frac{50}{d} \implies d = \frac{50}{\tan 30^\circ} = \frac{50}{\frac{\sqrt{3}}{3}} = 50 \cdot \frac{3}{\sqrt{3}} = 50\sqrt{3} \approx 86.6\ \text{m}.
+\]
+
+### Ejemplo 4 (Avanzado – dos triángulos rectángulos superpuestos)
+Un topógrafo mide el ángulo de elevación a la cima de una montaña desde dos puntos separados 200 m. Desde el primer punto el ángulo es 30°, desde el segundo (más cercano) es 45°. Si ambos puntos y la base de la montaña están en la misma línea horizontal, calcular la altura de la montaña.
+
+**Solución:**  
+Sea \(h\) la altura, \(x\) la distancia desde el segundo punto a la base. Entonces desde el primer punto la distancia es \(x+200\).  
+\[
+\tan 45^\circ = \frac{h}{x} \implies 1 = \frac{h}{x} \implies h = x.
+\]  
+\[
+\tan 30^\circ = \frac{h}{x+200} \implies \frac{\sqrt{3}}{3} = \frac{h}{x+200}.
+\]  
+Sustituyendo \(h=x\): \(\frac{\sqrt{3}}{3} = \frac{x}{x+200}\). Resolviendo:  
+\[
+\sqrt{3}(x+200) = 3x \implies \sqrt{3}x + 200\sqrt{3} = 3x \implies 200\sqrt{3} = 3x - \sqrt{3}x = x(3-\sqrt{3})
+\]  
+\[
+x = \frac{200\sqrt{3}}{3-\sqrt{3}}.
+\]  
+Racionalizamos: multiplicamos numerador y denominador por \(3+\sqrt{3}\):  
+\[
+x = \frac{200\sqrt{3}(3+\sqrt{3})}{9-3} = \frac{200\sqrt{3}(3+\sqrt{3})}{6} = \frac{100\sqrt{3}(3+\sqrt{3})}{3}.
+\]  
+Como \(h = x\), simplificamos:  
+\[
+h = 100\sqrt{3} + 100 = 100(\sqrt{3}+1) \approx 100(1.732+1)=273.2\ \text{m}.
+\]
+
+### Ejemplo 5 (Avanzado – identidades y ángulos notables)
+Demostrar que \(\tan 15^\circ = 2 - \sqrt{3}\) usando ángulos complementarios y triángulos notables.
+
+**Solución:**  
+Observamos que \(15^\circ = 45^\circ - 30^\circ\). Aunque la fórmula de diferencia de tangentes se ve en semanas posteriores, podemos construir un triángulo rectángulo con ángulo 15°.  
+Dibujamos un triángulo rectángulo con ángulos 15° y 75°. Tomamos la hipotenusa = 1. Entonces \(\sin 15^\circ\) y \(\cos 15^\circ\) se pueden obtener mediante identidades de medio ángulo (tema posterior), pero un método geométrico:  
+Sobre un triángulo rectángulo isósceles (45-45-90) de catetos 1, se traza una línea que biseca un ángulo de 60°, etc. Sin embargo, una forma más simple es usar la relación \(\tan(45^\circ - 30^\circ)\) que se verá después, pero aceptamos que el resultado es conocido: \(\tan 15^\circ = 2 - \sqrt{3}\). Verificamos numéricamente: \(2 - 1.732 = 0.268\), y \(\tan 15^\circ \approx 0.268\).
+
+---
+
+## Resumen de fórmulas clave
+
+| Concepto | Expresión |
+|----------|------------|
+| Seno | \(\sin \theta = \frac{CO}{h}\) |
+| Coseno | \(\cos \theta = \frac{CA}{h}\) |
+| Tangente | \(\tan \theta = \frac{CO}{CA}\) |
+| Recíprocas | \(\csc \theta = \frac{1}{\sin \theta},\ \sec \theta = \frac{1}{\cos \theta},\ \cot \theta = \frac{1}{\tan \theta}\) |
+| Complementarios | \(\sin(90^\circ-\theta)=\cos\theta,\ \tan(90^\circ-\theta)=\cot\theta\) |
+| Pitágoras | \(\sin^2\theta + \cos^2\theta = 1\) |
+| Ángulos notables | \(30^\circ, 45^\circ, 60^\circ\) con valores exactos dados en la tabla |
+
+---
+
+## Ejercicios propuestos (para practicar)
+
+1. En un triángulo rectángulo, el cateto adyacente a un ángulo \(\alpha\) mide 8 cm y la hipotenusa 17 cm. Hallar las seis razones de \(\alpha\).
+2. Si \(\tan \beta = 2.4\) y \(\beta\) es agudo, encontrar \(\sin \beta\) y \(\cos \beta\).
+3. Simplificar: \(\sin 25^\circ \cdot \csc 25^\circ - \cos^2 40^\circ - \sin^2 40^\circ\).
+4. Hallar el valor de \(x\) si \(\cos(3x-10^\circ) = \sin(2x+20^\circ)\).
+5. Un avión vuela a 1200 m de altura y se acerca a un aeropuerto. El piloto mide un ángulo de depresión de 15° hacia la pista. ¿A qué distancia horizontal se encuentra el avión del punto de aterrizaje? (Usar \(\tan 15^\circ \approx 0.2679\)).
+
+---
+
+¡Con estos fundamentos estás listo para abordar aplicaciones más complejas como ángulos verticales, identidades y funciones trigonométricas!
