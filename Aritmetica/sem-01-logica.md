@@ -1,162 +1,308 @@
-# 🏛️ Semana 01: Lógica Proposicional (Teoría y Práctica)
-**Área:** Ingenierías | **Ciclo:** Marzo - Julio 2026 CEPREUNA
-**Materia:** Aritmética
+# Semana 1: Lógica Proposicional
+
+## 1. Introducción a la lógica proposicional
+
+La lógica proposicional es la rama de la lógica que estudia las **proposiciones** (enunciados que pueden ser verdaderos o falsos) y las relaciones que se establecen entre ellas mediante conectores lógicos. Es fundamental para el razonamiento matemático, la computación y la ingeniería de circuitos.
+
+### 1.1 Proposiciones simples y compuestas
+
+- **Proposición simple**: Es aquella que no contiene conectores lógicos. Expresa una afirmación única que puede ser verdadera (V) o falsa (F), pero no ambas.
+  - Ejemplos:
+    - "5 es un número primo" (V)
+    - "La Luna es de queso" (F)
+    - "x + 3 = 7" (No es proposición porque depende del valor de x, a menos que se cuantifique)
+
+- **Proposición compuesta**: Se forma combinando dos o más proposiciones simples mediante conectores lógicos (conjunciones, disyunciones, negaciones, etc.).
+  - Ejemplo: "5 es primo **y** 2 + 2 = 4"
+
+### 1.2 Variables proposicionales
+
+Usamos letras minúsculas como \( p, q, r, \dots \) para representar proposiciones. A cada variable se le asigna un valor de verdad: **V** (1) o **F** (0).
+
+## 2. Conectores lógicos (funciones veritativas)
+
+Los conectores lógicos son operadores que permiten construir proposiciones compuestas. Su significado se define mediante **tablas de verdad**.
+
+### 2.1 Negación (\(\neg\))
+
+Invierte el valor de verdad de una proposición.
+
+| \(p\) | \(\neg p\) |
+|:---:|:---:|
+| V   | F   |
+| F   | V   |
+
+- **Ejemplo**:  
+  \(p\): "Está lloviendo"  
+  \(\neg p\): "No está lloviendo"
+
+### 2.2 Conjunción (\(\land\))
+
+Verdadera solo si **ambas** proposiciones son verdaderas.
+
+| \(p\) | \(q\) | \(p \land q\) |
+|:---:|:---:|:---:|
+| V   | V   | V   |
+| V   | F   | F   |
+| F   | V   | F   |
+| F   | F   | F   |
+
+- **Ejemplo**:  
+  \(p\): "El semáforo está en verde"  
+  \(q\): "El coche puede pasar"  
+  \(p \land q\): "El semáforo está en verde **y** el coche puede pasar"
+
+### 2.3 Disyunción inclusiva (\(\lor\))
+
+Verdadera si **al menos una** de las proposiciones es verdadera.
+
+| \(p\) | \(q\) | \(p \lor q\) |
+|:---:|:---:|:---:|
+| V   | V   | V   |
+| V   | F   | V   |
+| F   | V   | V   |
+| F   | F   | F   |
+
+- **Ejemplo**:  
+  \(p\): "Apruebo el examen"  
+  \(q\): "Recupero con trabajo práctico"  
+  \(p \lor q\): "Apruebo el examen **o** recupero con trabajo práctico" (pueden darse ambas).
+
+### 2.4 Disyunción exclusiva (\(\oplus\) o \(\veebar\))
+
+Verdadera si **exactamente una** de las proposiciones es verdadera.
+
+| \(p\) | \(q\) | \(p \oplus q\) |
+|:---:|:---:|:---:|
+| V   | V   | F   |
+| V   | F   | V   |
+| F   | V   | V   |
+| F   | F   | F   |
+
+- **Ejemplo**:  
+  "Hoy es martes **o** hoy es miércoles" (no pueden ser ambos).
+
+### 2.5 Implicación (\(\rightarrow\))
+
+\(p \rightarrow q\) se lee "si \(p\) entonces \(q\)". Es falsa solo cuando \(p\) es verdadera y \(q\) es falsa. En los demás casos es verdadera.
+
+| \(p\) | \(q\) | \(p \rightarrow q\) |
+|:---:|:---:|:---:|
+| V   | V   | V   |
+| V   | F   | F   |
+| F   | V   | V   |
+| F   | F   | V   |
+
+- **Ejemplo**:  
+  \(p\): "Estudio lógica"  
+  \(q\): "Aprendo"  
+  \(p \rightarrow q\): "Si estudio lógica, entonces aprendo"
+
+### 2.6 Bicondicional (\(\leftrightarrow\))
+
+\(p \leftrightarrow q\) se lee "\(p\) si y solo si \(q\)". Es verdadera cuando ambas tienen el mismo valor de verdad.
+
+| \(p\) | \(q\) | \(p \leftrightarrow q\) |
+|:---:|:---:|:---:|
+| V   | V   | V   |
+| V   | F   | F   |
+| F   | V   | F   |
+| F   | F   | V   |
+
+- **Ejemplo**:  
+  \(p\): "El triángulo tiene tres lados iguales"  
+  \(q\): "El triángulo es equilátero"  
+  \(p \leftrightarrow q\): "El triángulo tiene tres lados iguales **si y solo si** es equilátero"
+
+## 3. Tablas de verdad para expresiones complejas
+
+Para evaluar proposiciones compuestas con varias variables, construimos tablas de verdad considerando todas las combinaciones posibles de valores de verdad.
+
+### Ejemplo paso a paso
+
+Construir la tabla de verdad de \((p \land q) \rightarrow \neg r\)
+
+**Paso 1**: Identificar variables: \(p, q, r\) → \(2^3 = 8\) filas.
+
+**Paso 2**: Calcular subexpresiones.
+
+| \(p\) | \(q\) | \(r\) | \(p \land q\) | \(\neg r\) | \((p \land q) \rightarrow \neg r\) |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| V   | V   | V   | V   | F   | F   |
+| V   | V   | F   | V   | V   | V   |
+| V   | F   | V   | F   | F   | V   |
+| V   | F   | F   | F   | V   | V   |
+| F   | V   | V   | F   | F   | V   |
+| F   | V   | F   | F   | V   | V   |
+| F   | F   | V   | F   | F   | V   |
+| F   | F   | F   | F   | V   | V   |
+
+### Ejercicio para el estudiante
+
+Construye la tabla de verdad de \((p \rightarrow q) \leftrightarrow (\neg p \lor q)\) ¿Qué observas?
+
+## 4. Implicación lógica y equivalencias lógicas
+
+### 4.1 Implicación lógica
+
+Decimos que una fórmula \(A\) **implica lógicamente** a \(B\) (denotado \(A \Rightarrow B\)) si en todas las filas de la tabla de verdad donde \(A\) es verdadera, \(B\) también lo es. Es decir, \(A \rightarrow B\) es una tautología.
+
+- **Ejemplo**: \(p \land q \Rightarrow p\)  
+  Siempre que \(p \land q\) es V, \(p\) es V.
+
+### 4.2 Equivalencia lógica
+
+Dos fórmulas \(A\) y \(B\) son **lógicamente equivalentes** (\(A \equiv B\)) si tienen exactamente los mismos valores de verdad para todas las combinaciones de sus variables. Es decir, \(A \leftrightarrow B\) es una tautología.
+
+- **Ejemplo**: \(p \rightarrow q \equiv \neg p \lor q\)  
+  Compruébalo con una tabla de verdad.
+
+## 5. Equivalencias notables (Leyes del álgebra proposicional)
+
+Son identidades que permiten simplificar y transformar expresiones lógicas.
+
+| Nombre | Equivalencia |
+|--------|---------------|
+| **Doble negación** | \(\neg (\neg p) \equiv p\) |
+| **Idempotencia** | \(p \land p \equiv p\), \(p \lor p \equiv p\) |
+| **Conmutatividad** | \(p \land q \equiv q \land p\), \(p \lor q \equiv q \lor p\) |
+| **Asociatividad** | \((p \land q) \land r \equiv p \land (q \land r)\), análogo para \(\lor\) |
+| **Distributividad** | \(p \land (q \lor r) \equiv (p \land q) \lor (p \land r)\) <br> \(p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)\) |
+| **De Morgan** | \(\neg (p \land q) \equiv \neg p \lor \neg q\) <br> \(\neg (p \lor q) \equiv \neg p \land \neg q\) |
+| **Implicación** | \(p \rightarrow q \equiv \neg p \lor q\) |
+| **Contrarrecíproco** | \(p \rightarrow q \equiv \neg q \rightarrow \neg p\) |
+| **Bicondicional** | \(p \leftrightarrow q \equiv (p \rightarrow q) \land (q \rightarrow p)\) <br> \(p \leftrightarrow q \equiv (p \land q) \lor (\neg p \land \neg q)\) |
+| **Absorción** | \(p \land (p \lor q) \equiv p\) <br> \(p \lor (p \land q) \equiv p\) |
+| **Identidad** | \(p \land V \equiv p\), \(p \lor F \equiv p\) |
+| **Dominación** | \(p \lor V \equiv V\), \(p \land F \equiv F\) |
+| **Complemento** | \(p \land \neg p \equiv F\), \(p \lor \neg p \equiv V\) |
+
+### Ejemplo de simplificación
+
+Simplificar \((p \rightarrow q) \land (\neg p \rightarrow q)\):
+
+\[
+\begin{align*}
+(p \rightarrow q) \land (\neg p \rightarrow q) &\equiv (\neg p \lor q) \land (\neg \neg p \lor q) \quad \text{(Implicación)}\\
+&\equiv (\neg p \lor q) \land (p \lor q) \quad \text{(Doble negación)}\\
+&\equiv (\neg p \land p) \lor q \quad \text{(Distributividad: } (A \lor q) \land (B \lor q) \equiv (A \land B) \lor q\text{)}\\
+&\equiv F \lor q \equiv q
+\end{align*}
+\]
+
+Resultado: la expresión equivale simplemente a \(q\).
+
+## 6. Circuitos lógicos
+
+Los circuitos lógicos (o de conmutación) son representaciones físicas o esquemáticas de expresiones proposicionales. Se usan en electrónica digital y computadoras.
+
+### 6.1 Componentes básicos (interruptores)
+
+Modelamos proposiciones como interruptores que pueden estar **cerrados** (verdadero, paso de corriente) o **abiertos** (falso, no pasa corriente). Las combinaciones serie/paralelo corresponden a conectores:
+
+- **Circuito en serie**: Dos interruptores \(p\) y \(q\) en serie → la corriente pasa solo si ambos están cerrados. Equivale a \(p \land q\).
+
+- **Circuito en paralelo**: Dos interruptores en paralelo → la corriente pasa si al menos uno está cerrado. Equivale a \(p \lor q\).
+
+- **Circuito con inversor (negación)**: Un interruptor normalmente cerrado que se abre cuando la proposición es verdadera, o viceversa. Se representa con una compuerta NOT.
+
+### 6.2 Compuertas lógicas (para diseño digital)
+
+| Compuerta | Símbolo | Expresión |
+|-----------|---------|-----------|
+| AND       | &       | \(A \cdot B\) o \(A \land B\) |
+| OR        | ≥1      | \(A + B\) o \(A \lor B\) |
+| NOT       | ○       | \(\overline{A}\) o \(\neg A\) |
+| NAND      |         | \(\overline{A \land B}\) |
+| NOR       |         | \(\overline{A \lor B}\) |
+| XOR       | =1      | \(A \oplus B\) |
+
+### 6.3 De la expresión al circuito
+
+Construir el circuito lógico para \((p \land q) \lor (\neg p \land r)\)
+
+**Pasos**:
+1. Identificar subexpresiones: \(p \land q\) (AND), \(\neg p\) (NOT), luego \(\neg p \land r\) (AND).
+2. Combinar los dos resultados con una OR.
+
+**Diagrama textual**:
+p ----| |
+| AND |----
+q ----||
+OR ---- salida
+p ----|NOT|----| |
+|____| | AND |----/
+r ------------||
+
+
+### 6.4 Simplificación de circuitos usando álgebra proposicional
+
+Un circuito puede reducirse a otro equivalente más simple usando las leyes lógicas. Por ejemplo, el circuito \((p \land q) \lor (p \land \neg q)\) se simplifica a \(p\) por la ley de distribución y complemento:
+
+\[
+(p \land q) \lor (p \land \neg q) \equiv p \land (q \lor \neg q) \equiv p \land V \equiv p
+\]
+
+## 7. Problemas resueltos
+
+### Problema 1 (Básico)
+
+Determina el valor de verdad de la siguiente proposición compuesta, sabiendo que \(p\) es verdadera, \(q\) falsa y \(r\) verdadera:  
+\((p \rightarrow \neg q) \leftrightarrow (r \land \neg p)\)
+
+**Solución**:  
+- \(p = V\), \(q = F\), \(r = V\)  
+- \(\neg q = V\)  
+- \(p \rightarrow \neg q = V \rightarrow V = V\)  
+- \(\neg p = F\)  
+- \(r \land \neg p = V \land F = F\)  
+- \(V \leftrightarrow F = F\)  
+Resultado: **Falso**.
+
+### Problema 2 (Intermedio)
+
+Demostrar que \((p \rightarrow q) \land (p \rightarrow \neg q) \equiv \neg p\) usando leyes lógicas.
+
+**Solución**:
+
+\[
+\begin{align*}
+(p \rightarrow q) \land (p \rightarrow \neg q) &\equiv (\neg p \lor q) \land (\neg p \lor \neg q) \quad \text{(Implicación)}\\
+&\equiv \neg p \lor (q \land \neg q) \quad \text{(Distributividad)}\\
+&\equiv \neg p \lor F \equiv \neg p
+\end{align*}
+\]
+
+### Problema 3 (Avanzado - Circuito)
+
+Diseña un circuito para la función lógica de tres entradas \(a, b, c\) que sea verdadera solo cuando exactamente una de las tres entradas sea verdadera. Simplifica la expresión.
+
+**Solución**:
+
+La condición "exactamente una verdadera" se expresa como:
+
+\[
+(a \land \neg b \land \neg c) \lor (\neg a \land b \land \neg c) \lor (\neg a \land \neg b \land c)
+\]
+
+Esta expresión no se simplifica a algo más corto que tres términos AND con tres literales cada uno. El circuito requerirá tres compuertas AND de tres entradas (o combinación de AND de dos entradas) y una OR de tres entradas.
+
+## 8. Ejercicios propuestos
+
+1. **Tablas de verdad**: Construye la tabla de verdad de \((p \lor \neg q) \rightarrow (r \land \neg p)\)
+2. **Equivalencia**: Demuestra usando leyes que \((p \rightarrow q) \land (q \rightarrow r) \rightarrow (p \rightarrow r)\) es una tautología.
+3. **Simplificación**: Simplifica al máximo: \((p \land q) \lor (\neg p \land q) \lor (p \land \neg q)\)
+4. **Circuito**: Dibuja el circuito lógico (compuertas) para la expresión \(\overline{(p \land q) \lor r}\) y luego escríbelo usando solo compuertas NAND.
+5. **Traducción**: Escribe en lenguaje lógico: "Si estudio y practico, entonces apruebo; pero si no practico, entonces no apruebo".
+
+## 9. Respuestas breves a los ejercicios
+
+1. Tabla de verdad (8 filas). Última columna: F, V, V, V, V, V, V, V (depende del orden).
+2. Simplificar a \(V\) aplicando implicación, distributiva y complemento.
+3. \(q \lor p\) (equivalente a \(p \lor q\))
+4. \(\overline{(p \land q) \lor r} = \overline{p \land q} \land \overline{r}\) (De Morgan). Usando NAND: \(\overline{p \land q} = p \uparrow q\); luego \((p \uparrow q) \land \overline{r}\) requiere una NAND adicional.
+5. \((E \land P) \rightarrow A\) y \((\neg P) \rightarrow \neg A\). Equivalentemente \((E \land P) \rightarrow A\) y \(A \rightarrow P\) (contrapositiva). Se puede unir.
 
 ---
 
-## Teoría Normal en Markdown
-La lógica proposicional es fundamental para el examen.
-
-<div style="background-color: rgba(255, 0, 0, 0.1); border-left: 4px solid red; padding: 15px; border-radius: 5px; margin: 20px 0;">
-  <h3 style="color: #ff6b6b; margin-top: 0;">🚨 ¡Ojo al dato!</h3>
-  <p>En las preguntas tipo <b>DECO</b> de la UNAP, la palabra "pero" equivale a una conjunción $\land$.</p>
-</div>
-
-<div align="center">
-  <span style="color: #4ade80; font-size: 1.2rem; font-weight: bold;">
-    ¡Ese truco vale oro en el simulacro!
-  </span>
-</div>
-
-## 1. Enunciados y Proposiciones
-[cite_start]Antes de operar, debemos saber qué es válido en la lógica y qué no.
-
-### A. Enunciado
-Es cualquier frase, oración o expresión matemática. 
-* *Ejemplo:* "¡Qué frío hace en Juliaca!", "$x + 2 = 5$", "¿Qué hora es?".
-
-### B. Proposición Lógica ($p, q, r, \dots$)
-[cite_start]Es un enunciado aseverativo (afirma o niega algo) que tiene la propiedad exclusiva de ser **Verdadero (V)** o **Falso (F)**, pero nunca ambos a la vez.
-* **Sí son proposiciones:**
-  * "El lago Titicaca es el más alto del mundo." (V)
-  * "$2 + 2 = 5$" (F)
-* **No son proposiciones:**
-  * Preguntas, exclamaciones, deseos, órdenes ("¡Ingresaré a la UNAP!").
-  * **Enunciados abiertos:** "$x + 3 = 8$" (No sabemos si es V o F porque no conocemos el valor de $x$. Si le damos un valor, se convierte en proposición).
-
----
-
-## [cite_start]2. Conectivos Lógicos y Funciones Veritativas 
-Son los símbolos que enlazan proposiciones simples para formar compuestas. Cada conectivo tiene palabras equivalentes en nuestro idioma.
-
-### 2.1 Conjunción ($\land$)
-* **Se lee:** "p y q", "p pero q", "p sin embargo q", "p además q".
-* **Regla:** Solo es Verdadera ($V$) cuando **ambas** proposiciones son Verdaderas.
-
-### 2.2 Disyunción Débil o Inclusiva ($\lor$)
-* **Se lee:** "p o q", "p a menos que q".
-* **Regla:** Solo es Falsa ($F$) cuando **ambas** proposiciones son Falsas. (Admite que ambas pasen a la vez).
-
-### 2.3 Disyunción Fuerte o Exclusiva ($\Delta$)
-* **Se lee:** "O bien p o bien q" (pero no ambas).
-* **Regla:** Es Verdadera ($V$) solo cuando los valores son **diferentes**.
-
-### 2.4 Condicional ($\to$)
-* **Se lee:** "Si p entonces q", "p implica q", "q porque p" (¡Ojo! El orden importa: $p$ es la causa/antecedente y $q$ el efecto/consecuente).
-* **Regla:** Solo es Falsa ($F$) cuando partimos de una verdad y llegamos a una falsedad ($V \to F = F$).
-
-### 2.5 Bicondicional ($\leftrightarrow$)
-* **Se lee:** "p si y solo si q", "p es condición necesaria y suficiente para q".
-* **Regla:** Es Verdadera ($V$) solo cuando **ambos valores son iguales**.
-
-
-
----
-
-## [cite_start]3. Tablas de Verdad y Evaluación de Esquemas 
-
-Para evaluar una fórmula compleja, seguimos una jerarquía:
-1. Paréntesis y corchetes.
-2. Negación ($\sim$).
-3. Conjunción ($\land$) y Disyunción ($\lor$).
-4. Condicional ($\to$).
-5. Bicondicional ($\leftrightarrow$) y Disyunción Fuerte ($\Delta$).
-
-### 📝 Caso Práctico Resuelto: Evaluación
-**Problema:** Evaluar el esquema molecular: $(p \lor \sim q) \to (p \land q)$ e indicar si es Tautología, Contradicción o Contingencia.
-
-**Solución Paso a Paso:**
-Como hay 2 variables ($p, q$), la tabla tendrá $2^2 = 4$ filas.
-
-| $p$ | $q$ | $(p$ | $\lor$ | $\sim q)$ | $\to$ | $(p$ | $\land$ | $q)$ |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| V | V | V | **V** | F | **V** | V | **V** | V |
-| V | F | V | **V** | V | **F** | V | **F** | F |
-| F | V | F | **F** | F | **V** | F | **F** | V |
-| F | F | F | **V** | V | **F** | F | **F** | F |
-| | | 1 | **3** | 2 | **Rpta** | 1 | **2** | 1 |
-
-* **Análisis:** La columna principal (debajo de $\to$) tiene valores V y F.
-* **Respuesta:** El esquema es una **Contingencia**.
-
----
-
-## [cite_start]4. Implicación y Equivalencia Lógica 
-
-* **Implicación Lógica ($\Rightarrow$):** Decimos que $A \Rightarrow B$ si y solo si al hacer la tabla de verdad de $A \to B$, el resultado es una Tautología absoluta.
-* **Equivalencia Lógica ($\equiv$):** Decimos que $A \equiv B$ si y solo si la tabla de verdad de $A \leftrightarrow B$ es una Tautología. [cite_start]Significa que ambas fórmulas valen exactamente lo mismo y pueden reemplazarse entre sí.
-
----
-
-## [cite_start]5. Leyes del Álgebra Proposicional (Equivalencias Notables) 
-Estas leyes te salvan la vida en el examen. Memorízalas.
-
-1. **Idempotencia:** $p \lor p \equiv p$  |  $p \land p \equiv p$
-2. **Conmutativa:** $p \lor q \equiv q \lor p$  |  $p \land q \equiv q \land p$
-3. **Leyes de Morgan (¡Fijas!):** $$\sim(p \land q) \equiv \sim p \lor \sim q$$
-   $$\sim(p \lor q) \equiv \sim p \land \sim q$$
-4. **Definición del Condicional (¡Muy usada!):** $$p \to q \equiv \sim p \lor q$$
-5. **Leyes de Absorción (Ahorran minutos):**
-   * $p \lor (p \land q) \equiv p$
-   * $p \land (p \lor q) \equiv p$
-   * $p \lor (\sim p \land q) \equiv p \lor q$ *(El de afuera absorbe a su negación)*
-   * $p \land (\sim p \lor q) \equiv p \land q$
-
-### 📝 Caso Práctico Resuelto: Simplificación
-**Problema:** Simplificar la expresión: $\sim(\sim p \to q) \lor p$
-
-**Solución Paso a Paso:**
-1. Aplicamos la definición del condicional en el paréntesis ($A \to B \equiv \sim A \lor B$):
-   $$\sim(\sim(\sim p) \lor q) \lor p$$
-2. Doble negación ($\sim(\sim p) \equiv p$):
-   $$\sim(p \lor q) \lor p$$
-3. Aplicamos Ley de Morgan al paréntesis:
-   $$(\sim p \land \sim q) \lor p$$
-4. Aplicamos propiedad Conmutativa para acomodarlo a la vista:
-   $$p \lor (\sim p \land \sim q)$$
-5. Aplicamos Ley de Absorción (Caso 3: el de afuera absorbe a su negación interna):
-   $$p \lor \sim q$$
-   
-**Respuesta:** La expresión se reduce a $p \lor \sim q$ (que también equivale a $q \to p$).
-
----
-
-## [cite_start]6. Circuitos Lógicos 
-Es la aplicación de la lógica a la física y electrónica.
-
-### A. Circuito en Serie (Conjunción $\land$)
-La energía debe pasar por todos los interruptores uno tras otro. Si uno falla, no hay corriente.
-$$\text{--- } p \text{ --- } q \text{ ---} \equiv p \land q$$
-
-### B. Circuito en Paralelo (Disyunción $\lor$)
-La energía tiene caminos alternativos. Basta que un interruptor funcione para que pase la corriente.
-$$\begin{matrix}
- \text{---} & p & \text{---} \\
- & | & \\
- \text{---} & q & \text{---} 
-\end{matrix} \equiv p \lor q$$
-
-
-
-### 📝 Caso Práctico Resuelto: Circuitos
-**Problema:** Determinar la proposición que representa el siguiente circuito y simplificarla.
-*(Imagina un circuito donde arriba hay un interruptor '$p$' y en paralelo, abajo, hay dos interruptores en serie '$\sim p$' y '$q$').*
-
-**Solución Paso a Paso:**
-1. **Traducción:** La rama de abajo está en serie, por lo tanto es $(\sim p \land q)$.
-2. Esta rama inferior está en paralelo con el interruptor de arriba '$p$'. El paralelo es $\lor$.
-3. La fórmula queda: $p \lor (\sim p \land q)$
-4. **Simplificación:** Por la Ley de Absorción, esto es equivalente a:
-   $$p \lor q$$
-
-**Respuesta:** El circuito complejo equivale a un simple circuito en paralelo de $p$ y $q$.
+**Fin de la semana 1 - Lógica Proposicional**
