@@ -1,5 +1,55 @@
 # DIVISIBILIDAD I - Semana 5
 
+
+# PRINCIPIOS DE LA DIVISIBILIDAD
+
+**I)** La adición y sustracción de múltiplos de un mismo número siempre es igual a un múltiplo del mismo número.
+
+**EJEMPLOS:**
+$33 + 22 = 55 \quad ; \quad 33 - 22 = 11$
+
+$\overset{\circ}{11} + \overset{\circ}{11} = \overset{\circ}{11} \quad ; \quad \overset{\circ}{11} - \overset{\circ}{11} = \overset{\circ}{11}$
+
+> $\overset{\circ}{n} + \overset{\circ}{n} = \overset{\circ}{n} \quad \text{y} \quad \overset{\circ}{n} - \overset{\circ}{n} = \overset{\circ}{n}$
+
+---
+
+**II)** La multiplicación de un múltiplo de «n» por un entero, da como producto un múltiplo de «n».
+
+**EJEMPLO:**
+$12 \times 5 = 60 \Rightarrow \overset{\circ}{6} \times 5 = \overset{\circ}{6}$
+
+> $(\overset{\circ}{n})k = \overset{\circ}{n} \quad ; \quad k \in \mathbb{Z}^+$
+
+**EN GENERAL:**
+$\overset{\circ}{n} \times a = \begin{cases} \overset{\circ}{n} ; a \in \mathbb{Z} \\ \overset{\circ}{n \times a} ; a \in \mathbb{Z} \end{cases}$
+
+Propiedad distributiva especial:
+$(\overset{\circ}{n} + a)(\overset{\circ}{n} + b)(\overset{\circ}{n} + c) = \overset{\circ}{n} + abc$
+
+---
+
+**III)** La potencia de un múltiplo resulta otro múltiplo del mismo número.
+
+**EJEMPLOS:**
+$15 = \overset{\circ}{3}$
+
+$15^2 = 225 = 75 \times 3 = \overset{\circ}{3}$
+
+> $\Rightarrow (\overset{\circ}{n})^k = \overset{\circ}{n} \quad ; \quad k \in \mathbb{Z}^+$
+
+---
+
+**IV)** Si un número es múltiplo entre cierto módulo, es múltiplo con cada divisor del módulo.
+
+**EJEMPLO:**
+$15 : \underbrace{1; 3; 5; 15}_{\text{divisores}}$
+
+Entonces:
+$\overset{\circ}{15} = \overset{\circ}{1} \quad ; \quad \overset{\circ}{15} = \overset{\circ}{3} \quad ; \quad \overset{\circ}{15} = \overset{\circ}{5} \quad \text{y} \quad \overset{\circ}{15} = \overset{\circ}{15}$
+
+
+
 ## 1. Introducción a la Divisibilidad
 
 La divisibilidad es la parte de la aritmética que estudia las condiciones que debe cumplir un número entero para poder dividir exactamente a otro número entero. Decimos que un número entero \(a\) es **divisible** por otro entero \(b \neq 0\) si existe un entero \(k\) tal que:
